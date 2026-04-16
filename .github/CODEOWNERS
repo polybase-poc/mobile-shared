@@ -1,0 +1,9 @@
+# CODEOWNERS for mobile-shared
+# Template: single-team
+
+# Default owners for everything
+*       @polybase-poc/mobile
+
+# CI/CD and infrastructure changes require platform team review
+/.github/**              @polybase-poc/mobile @polybase-poc/platform-sre
+/Dockerfile              @polybase-poc/platform-sre

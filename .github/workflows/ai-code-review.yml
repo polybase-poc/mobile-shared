@@ -1,0 +1,19 @@
+name: AI Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: AI Review Placeholder
+        run: |
+          echo "🤖 Butler bot review would run here"
+          echo "This requires CLAUDE_API_KEY secret to be configured"
+          echo "See .claude/rules/code-review-bot.md for details"
